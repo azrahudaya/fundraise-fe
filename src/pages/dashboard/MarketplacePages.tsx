@@ -39,6 +39,7 @@ import {
 } from "../../lib/resourceConfigs";
 import { apiErrorMessage, compactCurrency, currency, dateShort, percent, readPath, textValue } from "../../lib/format";
 import type { Entity } from "../../types";
+import { asset } from "../../lib/asset";
 
 type SavedOpportunity = Entity & {
   saved_at?: string;
@@ -361,7 +362,7 @@ function OpportunityCard({
         <div className="absolute inset-0 grid place-items-center px-6 text-center">
           <div>
             <img
-              src="/brand/logo-icon-transparent.png"
+              src={asset("/brand/logo-icon-transparent.png")}
               alt=""
               className="mx-auto h-12 w-12 object-contain opacity-70"
             />
@@ -1485,7 +1486,7 @@ export function OpportunityDetailPage() {
             <div className="grid h-[240px] place-items-center px-6 text-center sm:h-[320px]">
               <div>
                 <img
-                  src="/brand/logo-icon-transparent.png"
+                  src={asset("/brand/logo-icon-transparent.png")}
                   alt=""
                   className="mx-auto h-14 w-14 object-contain opacity-70"
                 />

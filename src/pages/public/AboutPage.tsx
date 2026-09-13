@@ -1,51 +1,52 @@
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../lib/i18n/LanguageProvider";
+import { asset } from "../../lib/asset";
 
 const teamMembers = [
   {
     name: "M. Danendra Prawiraamijoyo",
     role: "Full-Stack Web Developer",
-    image: "/team/muhamad-danendra-prawiraamijoyo.webp",
+    image: asset("/team/muhamad-danendra-prawiraamijoyo.webp"),
   },
   {
     name: "Azra Hudaya",
     role: "Full-Stack Web Developer",
-    image: "/team/azra-hudaya.webp",
+    image: asset("/team/azra-hudaya.webp"),
   },
   {
     name: "Adam Kevin",
     role: "Data Scientist",
-    image: "/team/adam-kevin.webp",
+    image: asset("/team/adam-kevin.webp"),
   },
   {
     name: "Andika Ardiansyah",
     role: "Data Scientist",
-    image: "/team/andika-ardiansyah.webp",
+    image: asset("/team/andika-ardiansyah.webp"),
   },
   {
     name: "Aldi Kurnia Fadillah",
     role: "AI Engineer",
-    image: "/team/aldi-kurnia-fadillah.webp",
+    image: asset("/team/aldi-kurnia-fadillah.webp"),
   },
   {
     name: "Yazid Hilmi Allamsyah",
     role: "AI Engineer",
-    image: "/team/yazid-hilmi-allamsyah.webp",
+    image: asset("/team/yazid-hilmi-allamsyah.webp"),
   },
 ];
 
 const capstonePartners = [
   {
     name: "Coding Camp 2026",
-    logo: "/partners/coding-camp.webp",
+    logo: asset("/partners/coding-camp.webp"),
   },
   {
     name: "DBS Foundation",
-    logo: "/partners/dbs-foundation.webp",
+    logo: asset("/partners/dbs-foundation.webp"),
   },
   {
     name: "Dicoding",
-    logo: "/partners/dicoding.webp",
+    logo: asset("/partners/dicoding.webp"),
   },
 ];
 
@@ -105,10 +106,10 @@ export function AboutPage() {
               loop
               playsInline
               preload="metadata"
-              poster="/images/about-new-first-frame.png"
+              poster={asset("/images/about-new-first-frame.png")}
               aria-label={t("aboutImageAlt")}
             >
-              <source src="/videos/about-new.webm" type="video/webm" />
+              <source src={asset("/videos/about-new.webm")} type="video/webm" />
             </video>
           </div>
         </div>
@@ -191,7 +192,7 @@ export function AboutPage() {
           >
             <div className="overflow-hidden rounded-md border border-base-300 bg-base-200">
               <img
-                src="/images/meong.webp"
+                src={asset("/images/meong.webp")}
                 alt="Meong"
                 className="h-72 w-full object-cover"
                 loading="lazy"

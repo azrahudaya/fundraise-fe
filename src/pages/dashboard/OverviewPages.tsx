@@ -43,6 +43,7 @@ import {
 } from "../../lib/resourceConfigs";
 import { compactCurrency, currency, percent, readPath, statusTone, textValue } from "../../lib/format";
 import type { Entity, ResourceConfig } from "../../types";
+import { asset } from "../../lib/asset";
 
 const useResource = (config: ResourceConfig<Entity>, scopeKey?: string) =>
   useQuery({
@@ -191,7 +192,7 @@ type NextAction = {
 type ViewportVariant = "mobile" | "tablet" | "desktop";
 
 const overviewBannerBasePath = (language: "id" | "en") =>
-  language === "en" ? "/images/overview-banners/en" : "/images/overview-banners";
+  language === "en" ? asset("/images/overview-banners/en") : asset("/images/overview-banners");
 
 const resolveViewportVariant = (width: number): ViewportVariant => {
   if (width < 768) return "mobile";
@@ -524,7 +525,7 @@ function MatchList({
                         className="h-full w-full object-cover object-center"
                         loading="lazy"
                         onError={(event) => {
-                          event.currentTarget.src = "/brand/logo-horizontal-transparent.png";
+                          event.currentTarget.src = asset("/brand/logo-horizontal-transparent.png");
                           event.currentTarget.className = "h-full w-full object-contain p-8 opacity-70";
                         }}
                       />
@@ -532,7 +533,7 @@ function MatchList({
                       <div className="grid h-full place-items-center px-6 text-center">
                         <div>
                           <img
-                            src="/brand/logo-icon-transparent.png"
+                            src={asset("/brand/logo-icon-transparent.png")}
                             alt=""
                             className="mx-auto h-12 w-12 object-contain opacity-70"
                           />

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import clsx from "clsx";
+import { asset } from "../lib/asset";
 
 type LogoProps = {
   compact?: boolean;
@@ -9,10 +10,10 @@ type LogoProps = {
 
 export function Logo({ compact = false, className, variant = "default" }: LogoProps) {
   const src = compact
-    ? "/brand/logo-icon-transparent.png"
+    ? asset("/brand/logo-icon-transparent.png")
     : variant === "white"
-      ? "/brand/logo-horizontal-transparent-white.png"
-      : "/brand/logo-horizontal-transparent.png";
+      ? asset("/brand/logo-horizontal-transparent-white.png")
+      : asset("/brand/logo-horizontal-transparent.png");
 
   return (
     <Link to="/" className={clsx("inline-flex items-center gap-3", className)}>

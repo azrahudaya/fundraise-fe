@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Info, Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "../../lib/i18n/LanguageProvider";
+import { asset } from "../../lib/asset";
 
 export function ContactPage() {
   const { t } = useLanguage();
@@ -23,7 +24,7 @@ export function ContactPage() {
           </p>
           <div className="mt-8 aspect-[4/3] overflow-hidden rounded-md border border-base-300 bg-base-200 shadow-sm">
             <img
-              src="/images/contact.webp"
+              src={asset("/images/contact.webp")}
               alt={t("contactImageAlt")}
               className="h-full w-full object-cover"
             />

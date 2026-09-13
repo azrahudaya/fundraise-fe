@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../lib/i18n/LanguageProvider";
+import { asset } from "../../lib/asset";
 
 const services = [
   {
@@ -72,7 +73,7 @@ export function ServicesPage() {
           </div>
           <div className="aspect-video overflow-hidden rounded-md border border-base-300 bg-base-200 shadow-sm">
             <img
-              src="/images/services.webp"
+              src={asset("/images/services.webp")}
               alt={t("servicesImageAlt")}
               className="h-full w-full object-cover"
             />

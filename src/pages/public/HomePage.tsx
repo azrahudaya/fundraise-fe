@@ -17,6 +17,7 @@ import { compactCurrency, percent } from "../../lib/format";
 import { useLanguage } from "../../lib/i18n/LanguageProvider";
 import { useScrollReveal } from "../../lib/ui/useScrollReveal";
 import { dashboardPathFor, useAuth } from "../../lib/auth/AuthProvider";
+import { asset } from "../../lib/asset";
 
 const proofPoints = [
   { label: "homeProofFunding", value: compactCurrency(1250000000) },
@@ -84,15 +85,15 @@ const featuredOpportunities = [
 const programLogos = [
   {
     name: "Coding Camp 2026",
-    image: "/partners/coding-camp.webp",
+    image: asset("/partners/coding-camp.webp"),
   },
   {
     name: "DBS Foundation",
-    image: "/partners/dbs-foundation.webp",
+    image: asset("/partners/dbs-foundation.webp"),
   },
   {
     name: "Dicoding",
-    image: "/partners/dicoding.webp",
+    image: asset("/partners/dicoding.webp"),
   },
 ];
 
@@ -101,31 +102,31 @@ const testimonials = [
     name: "Rani Prameswari",
     role: "homeTestimonialRoleUmkm",
     quote: "homeTestimonialRani",
-    image: "/testimonials/rani-prameswari.webp",
+    image: asset("/testimonials/rani-prameswari.webp"),
   },
   {
     name: "Dimas Arya",
     role: "homeTestimonialRoleInvestor",
     quote: "homeTestimonialDimas",
-    image: "/testimonials/dimas-arya.webp",
+    image: asset("/testimonials/dimas-arya.webp"),
   },
   {
     name: "Nadia Putri",
     role: "homeTestimonialRoleAdmin",
     quote: "homeTestimonialNadia",
-    image: "/testimonials/nadia-putri.webp",
+    image: asset("/testimonials/nadia-putri.webp"),
   },
 ];
 
 const roleCards = [
   {
     title: "homeRoleUmkmTitle",
-    image: "/images/roles/umkm.webp",
+    image: asset("/images/roles/umkm.webp"),
     points: ["homeRoleUmkmPoint1", "homeRoleUmkmPoint2", "homeRoleUmkmPoint3"],
   },
   {
     title: "homeRoleInvestorTitle",
-    image: "/images/roles/investor.webp",
+    image: asset("/images/roles/investor.webp"),
     points: [
       "homeRoleInvestorPoint1",
       "homeRoleInvestorPoint2",
