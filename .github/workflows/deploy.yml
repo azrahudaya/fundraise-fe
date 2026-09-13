@@ -33,7 +33,7 @@ jobs:
 
       - name: Build
         env:
-          VITE_BASE_PATH: /fundraise-fe/
+          VITE_BASE_PATH: /
         run: npm run build
 
       - name: Salinan 404 untuk SPA fallback
